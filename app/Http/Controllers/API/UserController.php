@@ -177,6 +177,7 @@ class UserController extends Controller
         {
             return response()->json(['meta' => ['status' => 400, 'success' => false, 'message' => 'User could not be found!']]);
         }
+        
 
         if($user->delete())
         {
