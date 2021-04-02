@@ -23,7 +23,7 @@ use App\Http\Resources\UserResource;
     return $request->user();
 });*/
 
-Route::post('user/signup', [AuthenticationController::class, 'userSignUp']);
+//Route::post('user/signup', [AuthenticationController::class, 'userSignUp']);
 Route::post('user/login', [AuthenticationController::class, 'userLogin']);
 
 Route::middleware('auth:api')->group(function () 

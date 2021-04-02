@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::query()->orderBy('id','ASC')->paginate(5);
+        $users = User::query()->orderBy('id','ASC')->paginate();
 
         return UserResource::collection($users)->additional(['meta' => ['status' => 200, 'success' => true, 'message' => 'Employees loaded']]);
     }
